@@ -1,0 +1,76 @@
+{% include "navbar.html" %}
+<!-- header -->
+<header class="header-page-bg overlay-shape">
+    <!-- header-bottom-shape -->
+
+    <div class="header-bottom-shape"></div>
+    
+    <div class="container"> 
+          
+        <div class="header-page-content">  
+            {% for i in header %}
+            <small class="line-shape-bg color-white">
+                 {{i.header_title}}</small>
+            <h1 class="color-white">{{i.header_heading}}</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">{{i.header_point_1}}</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{i.header_point_2}}</li>
+                </ol>
+              </nav>
+             
+        </div> 
+        {% endfor %}
+    </div>
+   
+</header>
+
+<!-- .end header -->
+<!-- service-section -->
+
+<section class="service-section pt-100">
+    <div class="container">
+        <div class="section-title section-title-lg">
+        
+            <h2>{{i.service_title}}</h2>
+        </div>
+        <div class="service-item-grid d-flex flex-wrap ">
+            {% for i in servicesection %}
+            <div class="service-item-list service-box-two">
+                <div class="service-box-icon">
+<img src="/{{i.service_icon}}">    
+            </div>
+                <div class="service-box-text">
+                    <h3>{{i.service_sub_title}}</h3>
+                    <p>{{i.service_details}}</p>
+                    <p><a href="service-details.html" class="redirect-link">{{i.service_learn_more}}</a></p>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+</section>
+
+<!-- .end service-section -->
+<!-- partner-section -->
+
+<!-- .end partner-section -->
+<!-- report-section -->
+<div class="report-section">
+    <div class="container">
+        <div class="report-box">
+            <div class="report-box-inner">
+                <div class="report-box-item report-box-text">
+                    <h3>Get Free Report</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  quaerat voluptatem.</p>
+                </div>
+                <div class="report-box-item">
+                    <a href="#" class="btn">Download Report</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .end report-section -->
+{% include "footer.html" %}
